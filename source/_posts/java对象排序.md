@@ -18,8 +18,8 @@ categories:
 	     return 1;  
 	  }
 	 
-	 
-	 public static void main(String[] args){		  
+## 排序测试方法
+>	 public static void main(String[] args){		  
 		 PlatformActivitiesJoin u1 =new PlatformActivitiesJoin();
 		 u1.setVote(100);
 		 PlatformActivitiesJoin u2 =new PlatformActivitiesJoin();
@@ -54,7 +54,7 @@ categories:
    PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=500, imgsrclist=[])
    PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=300, imgsrclist=[])
 *******************************
-    排序后。。。。。
+    排序后
  PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=500, imgsrclist=[])
 PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=300, imgsrclist=[])
 PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=200, imgsrclist=[])
