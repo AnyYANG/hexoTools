@@ -151,6 +151,40 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2017/10/24/抓取httpClient的包/">
+                使用Fiddler抓取HttpClient的包
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-10-24</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/java/">java</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h3 id="使用Fiddler抓取HttpClient的包"><a href="#使用Fiddler抓取HttpClient的包" class="headerlink" title="使用Fiddler抓取HttpClient的包"></a>使用Fiddler抓取HttpClient的包</h3><blockquote>
+<p> 使用Fiddler，默认是无法抓取HttpClient的包，需要在程序中设置一下。  </p>
+</blockquote>
+<p>HttpHost proxy = new HttpHost(“localhost”,8888);<br>RequestConfig=config=RequestConfig.custom().setProxy(proxy).setConnectTimeout(10000).setSocketTimeout(15000).build();<br>CloseableHttpClient httpClient=HttpClientBuilder.create().setDefaultRequestConfig(config).build();</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2017/09/12/maven中scope详解/">
                 maven中scope详解
             </a>
@@ -409,6 +443,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/10/24/抓取httpClient的包/">使用Fiddler抓取HttpClient的包</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/09/12/maven中scope详解/">maven中scope详解</a>
             </li>
             
@@ -418,10 +456,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/08/19/Jstl标签/">jstl标签</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/08/08/mysqlsqlmode/">由Mydsql datetime的默认值不能为00</a>
             </li>
             
         </ul>
@@ -435,11 +469,11 @@
     <ul>
         
         <li>
-            <a class="footer-post" href="/categories/jstl/">jstl</a>
+            <a class="footer-post" href="/categories/Diary/">Diary</a>
         </li>
         
         <li>
-            <a class="footer-post" href="/categories/Diary/">Diary</a>
+            <a class="footer-post" href="/categories/jstl/">jstl</a>
         </li>
         
         <li>
