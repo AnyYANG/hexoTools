@@ -151,6 +151,47 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2017/11/29/mybatis中$和#/">
+                mybatis标签
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-11-29</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/mybatis/">mybatis</a>
+                </span>
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <h1 id="mybatis中的-和-的区别"><a href="#mybatis中的-和-的区别" class="headerlink" title="mybatis中的#和$的区别"></a>mybatis中的#和$的区别</h1><ol>
+<li><p>将#传入的数据都当成一个字符串，会对自动传入的数据加一个双引号。如：order by #user_id#，如果传入的值是111,那么解析成sql时的值为order by “111”, 如果传入的值是id，则解析成的sql为order by “id”.</p>
+</li>
+<li><p>将￥传入的数据直接显示生成在sql中。如：order by $user_id$，如果传入的值是111,那么解析成sql时的值为order by user_id,  如果传入的值是id，则解析成的sql为order by id.</p>
+</li>
+<li><p>井方式能够很大程度防止sql注入。</p>
+</li>
+</ol>
+<p>4.$方式无法防止Sql注入。</p>
+<p>5.$方式一般用于传入数据库对象，例如传入表名.<br>　　<br>6.一般能用#的就别用$.</p>
+<p>MyBatis排序时使用order by 动态参数时需要注意，用$而不是#</p>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2017/10/25/java上传图片/">
                 java上传服务器图片代码
             </a>
@@ -473,6 +514,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2017/11/29/mybatis中$和#/">mybatis标签</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/10/25/java上传图片/">java上传服务器图片代码</a>
             </li>
             
@@ -482,10 +527,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/09/12/maven中scope详解/">maven中scope详解</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/08/23/java对象排序/">Java对象排序</a>
             </li>
             
         </ul>
@@ -503,15 +544,15 @@
         </li>
         
         <li>
+            <a class="footer-post" href="/categories/mybatis/">mybatis</a>
+        </li>
+        
+        <li>
             <a class="footer-post" href="/categories/Diary/">Diary</a>
         </li>
         
         <li>
             <a class="footer-post" href="/categories/mysql/">mysql</a>
-        </li>
-        
-        <li>
-            <a class="footer-post" href="/categories/java/">java</a>
         </li>
         
     </ul>
