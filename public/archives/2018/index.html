@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Java对象排序"/>
+        <meta property="og:title" content="LiuyangWork"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Java对象排序 - LiuyangWork</title>
+    <title>Archives: 2018 - LiuyangWork</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -131,7 +131,9 @@
 <div class="container">
 
     <!-- Main Content -->
-    <div class="row">
+    
+
+<div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -139,94 +141,95 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
+            <h1 id="main-title" class="title">2018</h1>
+        
     </div>
 </header>
 
-        <section class="main">
+        <section class="main archive-container">
             
-<div class="post">
-
-    <div class="post-header">
-        <h1 class="title">
-            <a href="/2017/08/23/java对象排序/">
-                Java对象排序
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2017-08-23</span>
-            
-            
-            
-                <span class="category">
-                    <a href="/categories/java/">java</a>
-                </span>
-            
-        </div>
-    </div>
-
-    <div class="content">
-
-        <!-- Gallery -->
-        
-
-        <!-- Post Content -->
-        <h2 id="Java对象排序"><a href="#Java对象排序" class="headerlink" title="Java对象排序"></a>Java对象排序</h2><blockquote>
-<p> public class  TicketComparator implements Comparator{<br>     public  int compare(Object  obj1, Object obj2 ){<br>      PlatformActivitiesJoin join1 = (PlatformActivitiesJoin)obj1;<br>      PlatformActivitiesJoin join2 = (PlatformActivitiesJoin)obj2;<br>      if(join1.getVote()&gt;join2.getVote()){<br>          return -1;<br>      }<br>         return 1;<br>      }</p>
-</blockquote>
-<h2 id="排序测试方法"><a href="#排序测试方法" class="headerlink" title="排序测试方法"></a>排序测试方法</h2><blockquote>
-<pre><code>public static void main(String[] args){          
-     PlatformActivitiesJoin u1 =new PlatformActivitiesJoin();
-     u1.setVote(100);
-     PlatformActivitiesJoin u2 =new PlatformActivitiesJoin();
-     u2.setVote(200);
-     PlatformActivitiesJoin u3 =new PlatformActivitiesJoin();
-     u3.setVote(500);
-     PlatformActivitiesJoin u4 =new PlatformActivitiesJoin();
-     u4.setVote(300);  
-      ArrayList arrayList = new ArrayList();
-      arrayList.add(u1);
-      arrayList.add(u2);
-      arrayList.add(u3);
-      arrayList.add(u4);  
-      Object[] users =arrayList.toArray();
-      System.out.println (&quot;排序前。。。。&quot;);
-      for (int i = 0; i&lt;users.length; i++){
-       System.out.println (users[i]);
-      }
-      System.out.println (&quot;*******************************&quot;);
-      System.out.println (&quot;排序后。。。。。&quot;);
-      //把排序规则交给sort方法。该方法就回按照你自定义的规则进行排序
-      java.util.Arrays.sort(users,new TicketComparator());  
-       for (int i = 0; i&lt;users.length; i++){
-         System.out.println (users[i]);
-      }
-</code></pre></blockquote>
-<pre><code>}
-</code></pre><h2 id="result"><a href="#result" class="headerlink" title="result"></a>result</h2><blockquote>
-<p>  排序前。。。。<br>   PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=200, imgsrclist=[])<br>   PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=500, imgsrclist=[])<br>   PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=300, imgsrclist=[])</p>
-<hr>
-<pre><code>排序后
-</code></pre><p> PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=500, imgsrclist=[])<br>PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=300, imgsrclist=[])<br>PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=200, imgsrclist=[])<br>PlatformActivitiesJoin(id=null, platformActivitiesId=null, userId=null, addTime=null, state=0, email=null, nickname=null, avatar=null, topicTitle=null, inActivityDate=null, imgsrcs=null, albumcover=null, index=null, vote=100, imgsrclist=[])</p>
-</blockquote>
-
-    </div>
-
-    
-
-    
-        <div class="post-tags">
-            <i class="fa fa-tags" aria-hidden="true"></i>
-            <a href="/tags/排序/">#排序</a>
-        </div>
-    
-
-    <!-- Comments -->
-    
-
+                <div class="archive-post">
+    <a href="/2017/10/25/java上传图片/">
+        <span class="archive-date">
+            Oct 2017
+        </span>
+        java上传服务器图片代码
+    </a>
 </div>
+            
+                <div class="archive-post">
+    <a href="/2017/08/23/java对象排序/">
+        <span class="archive-date">
+            Aug 2017
+        </span>
+        Java对象排序
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2017/08/19/Jstl标签/">
+        <span class="archive-date">
+            Aug 2017
+        </span>
+        jstl标签
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2017/09/12/maven中scope详解/">
+        <span class="archive-date">
+            Sep 2017
+        </span>
+        maven中scope详解
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2017/07/21/一个程序员的焦虑/">
+        <span class="archive-date">
+            Jul 2017
+        </span>
+        一个程序员的焦虑
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2018/01/02/使用currentTarget  来获取 JavaScript当前事件所在元素中值/">
+        <span class="archive-date">
+            Jan 2018
+        </span>
+        Untitled
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2017/08/08/mysqlsqlmode/">
+        <span class="archive-date">
+            Aug 2017
+        </span>
+        由Mydsql datetime的默认值不能为0000-00-00 00：00：00引出的sqlmode问题
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2017/11/29/mybatis中$和#/">
+        <span class="archive-date">
+            Nov 2017
+        </span>
+        mybatis标签
+    </a>
+</div>
+            
+                <div class="archive-post">
+    <a href="/2017/10/24/抓取httpClient的包/">
+        <span class="archive-date">
+            Oct 2017
+        </span>
+        使用Fiddler抓取HttpClient的包
+    </a>
+</div>
+            
         </section>
-
     </div>
 </div>
 

@@ -151,6 +151,42 @@
 
     <div class="post-header index">
         <h1 class="title">
+            <a href="/2018/01/02/使用currentTarget  来获取 JavaScript当前事件所在元素中值/">
+                Untitled
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2018-01-02</span>
+            
+            
+            
+        </div>
+    </div>
+
+    
+        <div class="content">
+            <p>title:  使用currentTarget  来获取 JavaScript当前事件所在元素中值<br>date:  2018年1月2日 22点11分<br>tags: </p>
+<ul>
+<li>JavaScript<br>categories:</li>
+<li><p>JavaScript  </p>
+<h1 id="使用currentTarget-来获取-JavaScript当前事件所在元素中值"><a href="#使用currentTarget-来获取-JavaScript当前事件所在元素中值" class="headerlink" title="使用currentTarget  来获取 JavaScript当前事件所在元素中值"></a>使用currentTarget  来获取 JavaScript当前事件所在元素中值</h1><p>在使用JavaScript时候，可能会遇到使用css来注册一个事件。当用css注册事件的时候，可能由于每个元素所传值不一样，需要分别去读。这时候，可以考虑把元素的值放入到元素id或者其他attribute中去。 例如如下代码段</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".dialog"</span>).button().on(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        id = <span class="string">""</span>+event.currentTarget.id+<span class="string">""</span>;</div><div class="line">        <span class="built_in">console</span>.log(event);</div><div class="line">        dialog1.dialog(<span class="string">"open"</span>);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p> 我将所有的dialog的class按钮全部注册了一个click事件，但是我又想读出每个dialog按钮中的id值。这时候可以使用event.currentTarget.id 来获取当前元素的id。<br> 同理当我把这个event输入一下看结果可以看到。currentTarget可以把a标签中所有所包含的值全部滤出来。<strong>currentTarget 事件属性返回其监听器触发事件的节点，即当前处理该事件的元素、文档或窗口。</strong></p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">currentTarget:</div><div class="line">a#54240251119403008.ml10.btn.smallbtn.btn-y.dialogform-1.ui-button.ui-corner-all.ui-widget</div><div class="line">accessKey:""</div><div class="line">assignedSlot:null</div><div class="line">attributes:NamedNodeMap &#123;0: class, 1: title, 2: href, 3: id, 4: role, class: class, title: title, href: href, id: id, role: role, …&#125;</div><div class="line">baseURI:"http://127.0.0.1:8086/hou/order/list/company"</div><div class="line">charset:""</div><div class="line">childElementCount:0</div><div class="line">childNodes:NodeList [text]</div><div class="line">children:HTMLCollection []</div><div class="line">classList:DOMTokenList(8) ["ml10", "btn", "smallbtn", "btn-y", "dialogform-1", "ui-button", "ui-corner-all", "ui-widget", value: "ml10 btn smallbtn btn-y dialogform-1 ui-button ui-corner-all ui-widget"]</div><div class="line">className:"ml10 btn smallbtn btn-y dialogform-1 ui-button ui-corner-all ui-widget"</div><div class="line">clientHeight:16</div><div class="line">clientLeft:1</div><div class="line">clientTop:1</div><div class="line">clientWidth:52</div><div class="line">contentEditable:"inherit"</div><div class="line">coords:""</div><div class="line">dataset:</div><div class="line">DOMStringMap &#123;&#125;</div><div class="line">dir:""</div><div class="line">disabled:</div><div class="line">false</div><div class="line">download:""</div><div class="line">draggable:true</div><div class="line">firstChild:text</div><div class="line">firstElementChild:null</div><div class="line">hash:""</div><div class="line">hidden:false</div><div class="line">host:""</div><div class="line">hostname:""</div><div class="line">href:"javascript:void(0)"</div><div class="line">hreflang:""</div><div class="line">id:"54240251119403008"</div><div class="line">innerHTML:"去联系"</div><div class="line">innerText:"去联系"</div><div class="line">isConnected:true</div><div class="line">isContentEditable:false</div><div class="line">jQuery11110905568812459252:85</div><div class="line">lang:""</div><div class="line">lastChild:text</div><div class="line">lastElementChild:null</div><div class="line">localName:"a"</div><div class="line">name:""</div></pre></td></tr></table></figure>
+
+        </div>
+    
+
+</div>
+            
+                
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
             <a href="/2017/11/29/mybatis中$和#/">
                 mybatis标签
             </a>
@@ -514,6 +550,10 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2018/01/02/使用currentTarget  来获取 JavaScript当前事件所在元素中值/">Untitled</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/11/29/mybatis中$和#/">mybatis标签</a>
             </li>
             
@@ -523,10 +563,6 @@
             
             <li>
                 <a class="footer-post" href="/2017/10/24/抓取httpClient的包/">使用Fiddler抓取HttpClient的包</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/09/12/maven中scope详解/">maven中scope详解</a>
             </li>
             
         </ul>
@@ -544,15 +580,15 @@
         </li>
         
         <li>
-            <a class="footer-post" href="/categories/mybatis/">mybatis</a>
-        </li>
-        
-        <li>
             <a class="footer-post" href="/categories/Diary/">Diary</a>
         </li>
         
         <li>
             <a class="footer-post" href="/categories/mysql/">mysql</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/mybatis/">mybatis</a>
         </li>
         
     </ul>
